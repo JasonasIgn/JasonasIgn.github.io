@@ -1,0 +1,53 @@
+#loader {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f6f6;
+}
+
+.loader-icon {
+  opacity: 0;
+  overflow: hidden;
+  will-change: opacity;
+  animation: fading 2500ms infinite;
+  animation-delay: 0.2s;
+  transform: translateZ(0);
+}
+
+#root.appear {
+  animation: appear 200ms normal;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fading {
+  0% {
+    opacity: 0;
+  }
+  5% {
+  }
+  10% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
